@@ -1,0 +1,137 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: #000;
+}
+
+/* ✨ Animated Star Background */
+/* ✨ Pure CSS Star Background */
+.stars::before,
+.stars::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  background-size: contain;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Small stars layer */
+.stars::before {
+  background-image: radial-gradient(2px 2px at 20px 20px, white, transparent);
+  animation: moveStars 60s linear infinite;
+  opacity: 0.5;
+}
+
+/* Bigger brighter stars */
+.stars::after {
+  background-image: radial-gradient(3px 3px at 50px 50px, #ffffff, transparent);
+  animation: moveStars 120s linear infinite;
+  opacity: 0.8;
+}
+
+/* Star movement */
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-2000px); }
+}
+
+
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-2000px); }
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 15px #fff;
+}
+
+.subtitle {
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+
+/* CARD CONTAINER */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+/* ✨ Glass Effect Card */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  padding: 30px;
+  width: 220px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+}
+
+.card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.7);
+}
+
+.popup-content {
+  padding: 30px;
+  width: 330px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.glass {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.hidden {
+  display: none;
+}
