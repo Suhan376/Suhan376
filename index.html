@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HiringCo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constellations</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>This website is hosted</p>
+
+  <!-- Star Background -->
+  <div class="stars"></div>
+
+  <header>
+    <h1>✨ Constellations ✨</h1>
+    <p class="subtitle">Explore the wonders of the night sky</p>
+  </header>
+
+ <div class="container" id="constellation-container"></div>
+
+
+  <!-- Popup -->
+  <div class="popup hidden">
+    <div class="popup-content glass">
+      <span class="close">&times;</span>
+      <h2 id="popup-title"></h2>
+      <p id="popup-desc"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
